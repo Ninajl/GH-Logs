@@ -1,0 +1,33 @@
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to "Create Resident", new_resident_path, class: 'btn btn-primary' %>
+  </div>
+  <center>
+    <h1>Residents of GlassHouse</h1>
+    </center>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Tower</th>
+      <th>Unit</th>
+      <th>Role</th>
+      <th>Full Name</th>
+      <th>Telephone</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @residents.each do |resident| %>
+    <tr>
+      <td><%= resident.tower %></td>
+      <td><%= resident.unit %></td>
+      <td><%= resident.role %></td>
+      <td><%= resident.fullname %></td>
+      <td><%= resident.telephone %></td>
+      <td><%= resident.email %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
