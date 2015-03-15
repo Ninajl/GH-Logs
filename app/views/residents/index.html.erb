@@ -21,10 +21,10 @@
   <tbody>
     <% @residents.each do |resident| %>
     <tr>
-      <% if resident.tower = true %>
-      <td>North</td>
-      <% else resident.tower %>
+      <% if resident.tower != false %>
       <td>South</td>
+      <% else %>
+      <td>North</td>
       <% end %>
       <td><%= resident.unit %></td>
       <td><%= resident.role %></td>
@@ -35,3 +35,4 @@
     <% end %>
   </tbody>
 </table>
+<p> <%= link_to "Home", root_path %></p>

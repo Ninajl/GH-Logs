@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20150315201920) do
     t.string  "first_name"
     t.string  "last_name"
     t.integer "unit"
-    t.boolean "tower"
+    t.boolean "tower",      default: false
     t.string  "telephone"
     t.string  "email"
   end
