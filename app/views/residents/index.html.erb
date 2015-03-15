@@ -21,7 +21,11 @@
   <tbody>
     <% @residents.each do |resident| %>
     <tr>
-      <td><%= resident.tower %></td>
+      <% if resident.tower = true %>
+      <td>North</td>
+      <% else resident.tower %>
+      <td>South</td>
+      <% end %>
       <td><%= resident.unit %></td>
       <td><%= resident.role %></td>
       <td><%= resident.fullname %></td>

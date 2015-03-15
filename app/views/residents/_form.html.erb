@@ -1,0 +1,63 @@
+<%= form_for @resident do |f| %>
+
+<div class="well form-inline">
+<div class="form-group col-md-1">
+<%= f.label :unit %>
+</div>
+<div class="col-md-2">
+<%= f.text_field :unit %>
+</div>
+
+
+
+<div class="form-group col-md-1">
+  <%= f.label :first_name %>
+</div>
+<div class="col-md-2">
+  <%= f.text_field :first_name %>
+</div>
+
+
+
+<div class="form-group col-md-1">
+  <%= f.label :last_name %>
+</div>
+<div class="col-md-2">
+  <%= f.text_field :last_name %>
+</div>
+
+
+
+<div class="form-group col-md-1">
+  <%= f.label :telephone %>
+</div>
+<div class="col-md-2">
+  <%= f.text_field :telephone %>
+</div>
+
+
+
+<div class="form-group col-md-1">
+  <%= f.label :email %>
+</div>
+<div class="col-md-2">
+  <%= f.email_field :email %>
+</div>
+
+
+<!--
+<div class="form-group">
+<%= f.select(:role, [["Owner", :owner], ["Renter", :renter]], {include_blank: "Select Role"}, {class: 'form-control'}) %>
+</div> -->
+
+<div class="form-group">
+  <%= f.select(:tower, [["North", :north],["South", :south]], {include_blank: 'Select Tower'}, {class: "form-control"}) %>
+</div>
+
+
+
+<div>
+<%= f.submit "Create", class: 'btn btn-success' %>
+</div>
+<% end %>
+</div>
