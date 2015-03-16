@@ -31,8 +31,9 @@
       <td><%= resident.fullname %></td>
       <td><%= resident.telephone %></td>
       <td><%= resident.email %></td>
+      <td><%= link_to 'Edit', edit_resident_path(resident), class: 'btn btn-info' %></td>
+      <td><%= link_to 'Delete', resident_path(resident), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-<p> <%= link_to "Home", root_path %></p>

@@ -7,6 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<p> <%= link_to "Home", root_path %></p>
+
+<% if notice %>
+<center>
+  <div class="alert alert-success">
+    <%= notice %>
+  </div>
+</center>
+
+<% elsif alert %>
+<center>
+  <div class="alert alert-danger">
+    <%= alert %>
+  </div>
+</center>
+<% end %>
 
 <%= yield %>
 
